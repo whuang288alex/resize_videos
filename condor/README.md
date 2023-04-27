@@ -14,11 +14,11 @@ mv resize_videos.tar.gz /staging/groups/li_group_biostats
 
 3. Submit the job
 
-`condor_submit run_extraction.sub`
+`condor_submit resize.sub`
 
 ## Other Useful Condor commands
 
-- To submit interactive job for debugging: `condor_submit -i run_extraction.sub`
+- To submit interactive job for debugging: `condor_submit -i resize.sub`
 
 - To check out task status: `conqor_q`
 

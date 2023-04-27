@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: modify this part if needed
-ENVNAME=feature_extraction      
+ENVNAME=resize      
 INPUT_STAGING_DIR=groups/li_group_biostats
 INPUT_TAR=THUMOS14_test
 INPUT_FOLDER=test
@@ -24,6 +24,6 @@ python resize_videos.py -vi ./videos -vo ./videos_resized  -s 288 -fps 30
 
 # zip the results
 rm ./*.py
-tar -zcvf $OUTPUT.tar.gz ./videos_resized/*.pt
-mv $OUTPUT.tar.gz /staging/$OUTPUT_STAGING_DIR/
+tar -zcvf $OUTPUT_TAR.tar.gz ./videos_resized/*.mp4
+mv $OUTPUT_TAR.tar.gz /staging/$OUTPUT_STAGING_DIR/
 
