@@ -1,0 +1,1 @@
+python check_videos.py -vi ./videos_resized
