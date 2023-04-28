@@ -3,10 +3,7 @@
 # TODO: modify this part if needed
 ENVNAME=resize      
 INPUT_STAGING_DIR=groups/li_group_biostats
-INPUT_TAR=THUMOS14_val
-INPUT_FOLDER=validation
-OUTPUT_STAGING_DIR=groups/li_group_biostats
-OUTPUT_TAR=resized_val
+INPUT_TAR=resized_test
 
 # Assumptions:
 # 1) code is zipped to "resize_videos.tar.gz"
@@ -19,10 +16,4 @@ tar -xzf /staging/$INPUT_STAGING_DIR/resize_videos.tar.gz
 tar -xzf /staging/$INPUT_STAGING_DIR/$INPUT_TAR.tar.gz
 
 # run the extraction
-python resize_videos.py -vi ./$INPUT_FOLDER -vo ./videos_resized  -s 288 -fps 30
-
-# zip the results
-rm ./*.py
-tar -zcvf $OUTPUT_TAR.tar.gz ./videos_resized/*.mp4
-mv $OUTPUT_TAR.tar.gz /staging/$OUTPUT_STAGING_DIR/
-
+python check_videos.py -vi ./videos_resized -fps 30

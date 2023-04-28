@@ -1,1 +1,1 @@
-python check_videos.py -vi ./videos_resized
+python check_videos.py -vi ./videos_resized -fps 30

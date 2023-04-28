@@ -3,12 +3,16 @@
 1. To pack your codes
 
 ```sh
+conda activate base
+conda pack -n resize
+chmod 644 resize.tar.gz
 tar -zcvf resize_videos.tar.gz ../resize_videos.py ../check_videos.py
 ```
 
 2. To move those to the staging directory:
 
 ```
+mv resize.tar.gz  /staging/whuang288/
 mv resize_videos.tar.gz /staging/groups/li_group_biostats
 ```
 
